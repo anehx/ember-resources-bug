@@ -1,0 +1,15 @@
+{{page-title "EmberResourcesBug"}}
+
+<h1>Users</h1>
+
+{{#if this.users.isRunning}}
+  Loading ...
+{{else if this.users.value.length}}
+  <ul>
+    {{#each this.users.value as |user|}}
+      <li>{{user.name}}</li>
+    {{/each}}
+  </ul>
+{{else}}
+  No users found
+{{/if}}
